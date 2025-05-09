@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run:zod": "ts-node src/index.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ts-node": "^10.9.2",
     "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
   }
 }
