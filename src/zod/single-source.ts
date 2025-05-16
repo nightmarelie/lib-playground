@@ -8,3 +8,8 @@ const guestDetailsSchema = z.object({
 
 type GuestDetails = z.infer<typeof guestDetailsSchema>;
 
+const details: GuestDetails = {
+    age: 12,
+    email: 'test@test.com',
+    name: 'Test',
+}
