@@ -25,3 +25,10 @@ const fetchData = async <T>(url: string): Promise<T> => {
     console.log(date);
 })();
 
+try {
+
+} catch (e) {
+    if (e instanceof z.ZodError) {
+
+    }
+}
