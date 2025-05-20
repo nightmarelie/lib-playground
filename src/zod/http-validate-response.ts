@@ -29,6 +29,10 @@ try {
 
 } catch (e) {
     if (e instanceof z.ZodError) {
-
+        for(const zodIssue of e.issues) {
+            console.log(zodIssue.code);
+            console.log(zodIssue.path);
+            console.log(zodIssue.message);
+        }
     }
 }
