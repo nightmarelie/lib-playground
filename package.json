@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run:zod": "ts-node src/zod/index.ts"
+    "run:zod": "ts-node"
   },
   "keywords": [],
   "author": "",
