@@ -20,7 +20,7 @@ const fetchData = async <T>(url: string): Promise<T> => {
 }
 
 (async () => {
-    const date = await fetchData<Booking>(`${API_URL}/posts/1`);
+    const date = await fetchData<Booking>(`${API_URL}/posts/1`).then(data => bookingSchema.parse(data));
 
     console.log(date);
 })();
