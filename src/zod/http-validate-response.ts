@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import {z} from 'zod';
 
 const API_URL = 'https://jsonplaceholder.typicode.com';
 
@@ -6,7 +6,7 @@ const bookingSchema = z.object({
     userId: z.number(),
     id: z.number(),
     title: z.string(),
-    completed: z.boolean(),
+    body: z.string(),
 });
 
 type Booking = z.infer<typeof bookingSchema>;
@@ -20,6 +20,8 @@ const fetchData = async <T>(url: string): Promise<T> => {
 }
 
 (async () => {
-    await fetchData<Booking>(`${API_URL}/posts/1`);
-})()
+    const date = await fetchData<Booking>(`${API_URL}/posts/1`);
+
+    console.log(date);
+})();
 
