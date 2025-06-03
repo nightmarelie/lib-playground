@@ -15,7 +15,9 @@ const guestDetailsSchema = z.object({
 
 const roomBookingSchema = z.object({
     roomType: z.string(),
-    dueDate: z.string().refine(dateStr => !isNaN(Date.parse(dateStr))),
+    dueDate: z.string().refine(dateStr => !isNaN(Date.parse(dateStr)), {
+        message: 'Invalid date format, expected YYYY-MM-DD',
+    }),
     numberOfGuests: z.number(),
     price: z.number().positive(),
     guestDetails: z.array(guestDetailsSchema),
