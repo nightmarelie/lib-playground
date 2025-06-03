@@ -7,7 +7,6 @@ console.log(numberOfGuests.parse(3));
 console.log(contactEmail.parse('test@gmail.com'));
 
 
-
 const guestDetailsSchema = z.object({
     name: z.string(),
     age: z.number().min(18).max(100),
@@ -16,11 +15,25 @@ const guestDetailsSchema = z.object({
 
 const roomBookingSchema = z.object({
     roomType: z.string(),
-    dueDate: z.date(),
+    dueDate: z.string().refine(dateStr => !isNaN(Date.parse(dateStr))),
     numberOfGuests: z.number(),
     price: z.number().positive(),
     guestDetails: z.array(guestDetailsSchema),
 });
+
+const validRoomBookingData = {
+    roomType: 'single',
+    dueDate: '2023-10-12',
+    numberOfGuests: 2,
+    price: 100,
+}
+
+const invalidRoomBookingData = {
+    roomType: 'single',
+    dueDate: 'invalid-date',
+    numberOfGuests: 4, // Exceeds max limit
+    price: -50, // Negative price
+}
 
 const bookingData = {
     roomType: 'single',
