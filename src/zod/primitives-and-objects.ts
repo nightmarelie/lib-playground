@@ -20,15 +20,24 @@ const roomBookingSchema = z.object({
     }),
     numberOfGuests: z.number(),
     price: z.number().positive(),
-    guestDetails: z.array(guestDetailsSchema),
+    guestDetails: z.array(guestDetailsSchema).min(1).max(3),
+    // guestDetailsNonempty: z.array(guestDetailsSchema).nonempty(),
 });
 
-const validRoomBookingData = {
+type Booking = z.infer<typeof roomBookingSchema>;
+
+const validRoomBookingData: Booking = {
     roomType: 'single',
     dueDate: '2023-10-12',
     numberOfGuests: 2,
     price: 100,
-}
+    guestDetails: [],
+    // guestDetailsNonempty: [{
+    //     name: 10,
+    //     age: 15,
+    //     email: 'test@test.com'
+    // }],
+};
 
 const invalidRoomBookingData = {
     roomType: 'single',
