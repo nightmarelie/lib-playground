@@ -2,6 +2,12 @@ name: 'Playground'
 description: 'A GitHub Action to run a playground script'
 author: 'Oleksii Kryvtsov'
 
+inputs:
+  script:
+    description: 'The script to run in the playground'
+    required: true
+    default: 'some-script'
+
 runs:
   using: 'node20'
   main: 'dist/index.js'
