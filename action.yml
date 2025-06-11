@@ -1,0 +1,7 @@
+name: 'Playground'
+description: 'A GitHub Action to run a playground script'
+author: 'Oleksii Kryvtsov'
+
+runs:
+  using: 'node20'
+  main: 'src/index.js'
