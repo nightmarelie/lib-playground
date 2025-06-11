@@ -8,6 +8,10 @@ inputs:
     required: true
     default: 'some-script'
 
+outputs:
+  result:
+    description: 'The result of the playground script'
+
 runs:
   using: 'node20'
   main: 'dist/index.js'

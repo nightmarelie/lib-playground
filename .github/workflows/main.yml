@@ -11,3 +11,5 @@ jobs:
     - uses: ./
       with:
         script: 'playground'
+      id: result
+    - run: echo ${{ steps.result.outputs.result }}

@@ -30229,6 +30229,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(9999));
 console.log('an input script is: ', core.getInput('script'));
 __exportStar(__nccwpck_require__(4432), exports);
+core.setOutput('result', 'This is the result of the action');
 
 
 /***/ }),
