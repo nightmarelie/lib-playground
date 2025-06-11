@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run:zod": "ts-node"
+    "run:zod": "ts-node",
+    "bump": "pnpm version"
   },
   "keywords": [],
   "author": "",
