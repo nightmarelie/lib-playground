@@ -13,6 +13,9 @@ dependencies:
     version: 3.24.4
 
 devDependencies:
+  '@vercel/ncc':
+    specifier: ^0.38.3
+    version: 0.38.3
   typescript:
     specifier: ^5.8.3
     version: 5.8.3
@@ -63,6 +66,11 @@ packages:
     dependencies:
       undici-types: 6.21.0
     dev: false
+
+  /@vercel/ncc@0.38.3:
+    resolution: {integrity: sha512-rnK6hJBS6mwc+Bkab+PGPs9OiS0i/3kdTO+CkI8V0/VrW3vmz7O2Pxjw/owOlmo6PKEIxRSeZKv/kuL9itnpYA==}
+    hasBin: true
+    dev: true
 
   /acorn-walk@8.3.4:
     resolution: {integrity: sha512-ueEepnujpqee2o5aIYnvHU6C0A42MNdsIDeqy5BydrkuC5R1ZuUFnm27EeFJGoEHJQgn3uleRvmTXaJgfXbt4g==}
